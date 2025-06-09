@@ -94,7 +94,7 @@ pub enum ContentType {
 
 #[derive(Debug, Serialize, Deserialize, Clone, PartialEq)]
 pub struct InputText {
-    text: String,
+    pub text: String,
 }
 
 #[derive(Debug, Serialize, Deserialize, Clone, PartialEq, Default, Builder)]
@@ -818,13 +818,13 @@ pub struct FileCitation {
 #[derive(Debug, Serialize, Deserialize, Clone, PartialEq)]
 pub struct UrlCitation {
     /// The index of the last character of the URL citation in the message.
-    end_index: u32,
+    pub end_index: u32,
     /// The index of the first character of the URL citation in the message.
-    start_index: u32,
+    pub start_index: u32,
     /// The title of the web resource.
-    title: String,
+    pub title: String,
     /// The URL of the web resource.
-    url: String,
+    pub url: String,
 }
 
 #[derive(Debug, Serialize, Deserialize, Clone, PartialEq)]
